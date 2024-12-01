@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Web App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+<div class="container">
+    <!-- Окно Входа -->
+    <div class="form" id="login-form">
+        <h1>Вход</h1>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Введите email">
+        <label for="password">Пароль</label>
+        <div class="password-container">
+            <input type="password" id="password" placeholder="Введите пароль">
+            <button type="button" class="toggle-password" id="toggle-password">👁</button>
+        </div>
+        <button class="btn" id="login-btn">Войти</button>
+        <p>Нет аккаунта? <a href="#" id="register-link">Зарегистрируйтесь</a></p>
+    </div>
+
+    <!-- Окно Регистрации -->
+    <div class="form hidden" id="register-form">
+        <h1>Регистрация</h1>
+        <label for="phone">Телефон</label>
+        <input type="tel" id="phone" placeholder="+7">
+        <label for="nickname">Никнейм</label>
+        <input type="text" id="nickname" placeholder="Введите никнейм">
+        <label for="new-password">Пароль</label>
+        <div class="password-container">
+            <input type="password" id="new-password" placeholder="Введите пароль">
+            <button type="button" class="toggle-password" id="toggle-new-password">👁</button>
+        </div>
+        <label for="confirm-password">Подтвердите пароль</label>
+        <input type="password" id="confirm-password" placeholder="Подтвердите пароль">
+        <div class="policy">
+            <input type="checkbox" id="privacy-policy">
+            <label for="privacy-policy">Я согласен с <a href="#">политикой конфиденциальности</a></label>
+        </div>
+        <button class="btn" id="register-btn">Зарегистрироваться</button>
+        <p>Уже зарегистрированы? <a href="#" id="login-link">Войдите</a></p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
